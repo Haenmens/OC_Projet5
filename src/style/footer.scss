@@ -1,0 +1,19 @@
+footer {
+    margin-top: 45px;
+    display: flex;
+    flex-direction: column;
+    padding-top: 66px;
+    background-color: black;
+    align-items: center;
+    justify-content: center;
+
+    img {
+        width: 122px;
+        height: 39px;
+    }
+    p {
+        color: white;
+        font-size: 24px;
+        font-weight: 500;
+    }
+}
