@@ -1,0 +1,101 @@
+.logement {
+    position: relative;
+    margin-top: 45px;
+    .carousel {
+        position: relative;
+        width: 1240px;
+        margin: auto;
+    }
+    img {
+        width: 100%;
+        height: 415px;
+        object-fit: cover;
+        border-radius: 25px;
+    }
+    .cachee {
+        display: none;
+    }
+    .fleche-gauche,.fleche-droite {
+        position: absolute;
+        top: 167px;
+        width: 46px;
+        height: 80px;
+        cursor: pointer;
+    }
+    .fleche-gauche {
+        left: 20px;
+    }
+    .fleche-droite {
+        right: 20px;
+    }
+    .compteur {
+        position: absolute;
+        top: 358px;
+        left: 607px;
+        color: white;
+        font-size: 18px;
+        font-weight: 500;
+    }
+
+    h2 {
+        font-size: 36px;
+        font-weight: 500;
+        color: #FF6060;
+        margin-bottom: 5px;
+    }
+    .localisation {
+        font-size: 18px;
+        font-weight: 500;
+        margin-top: 0;
+        margin-bottom: 20px;
+    }
+    .tags {
+        display: flex;
+        flex-direction: row;
+        gap: 15px;
+        margin-bottom: 20px;
+    }
+    .tag {
+        border: none;
+        border-radius: 10px;
+        background-color: #FF6060;
+        color: white;
+        padding: 3px 40px;
+        font-family: 'Montserrat';
+        font-size: 14px;
+        font-weight: 700;
+    }
+    .details {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 50px;
+
+        .titre {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background-color: #FF6060;
+            border-radius: 10px;
+            font-size: 18px;
+            font-weight: 700;
+            color: white;
+            padding: 15px 10px;
+
+            img {
+                width: 24px;
+                height: 13px;
+                cursor: pointer;
+            }
+        }
+
+        .contenu-description {
+            padding: 20px 20px;
+            background-color: #F6F6F6;
+            font-size: 18px;
+            font-weight: 400;
+            border-bottom-right-radius: 5px;
+            border-bottom-left-radius: 5px;
+        }
+    }
+    
+}
