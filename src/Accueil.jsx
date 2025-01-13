@@ -6,7 +6,6 @@ import FicheLogement from './FicheLogement';
 function Accueil()
 {
     return (
-        <div>
             <main>
                 <div className='image-main'>
                     <img src={ImgAccueil} />
@@ -20,7 +19,6 @@ function Accueil()
                     }
                 </div>
             </main>
-        </div>
     );
 }
 
