@@ -33,36 +33,36 @@ function Logement()
 
     return (
         <main>
-            <div className="logement">
-                <div className='carrousel'>
+            <div id="logement" className='p-r'>
+                <div id='carrousel' className='p-r mgn-auto'>
                 {
                         logement.pictures.map((photo, i) => (
-                            <img src={photo} key={i} className={i === indexActuel ? "visible" : "cachee"}/>
+                            <img src={photo} key={i} className={i === indexActuel ? "visible w100" : "cachee"}/>
                         ))
                     }
-                    <img src={FlecheGauche} className={logement.pictures.length > 1 ? "fleche-gauche" : "cachee"} onClick={imagePrecedente}/>
-                    <img src={FlecheDroite} className={logement.pictures.length > 1 ? "fleche-droite" : "cachee"} onClick={imageSuivante}/>
-                    <p className={logement.pictures.length > 1 ? "compteur" : "cachee"}>{indexActuel + 1}/{logement.pictures.length}</p>
+                    <img src={FlecheGauche} id='fleche-gauche' className={logement.pictures.length > 1 ? "p-a curs-p" : "cachee"} onClick={imagePrecedente}/>
+                    <img src={FlecheDroite} id='fleche-droite' className={logement.pictures.length > 1 ? "p-a curs-p" : "cachee"} onClick={imageSuivante}/>
+                    <p id='compteur' className={logement.pictures.length > 1 ? "p-a" : "cachee"}>{indexActuel + 1}/{logement.pictures.length}</p>
                 </div>
-                <div className='logement-header-1'>
-                    <div className='logement-titre'>
+                <div id='logement-header-1' className='flex f-row algni-ctr jc-sb'>
+                    <div id='logement-titre'>
                         <h2>{logement.title}</h2>
-                        <p className='localisation'>{logement.location}</p>
+                        <p id='localisation'>{logement.location}</p>
                     </div>
-                    <div className='hote'>
+                    <div id='hote' className='flex f-row algni-ctr g10'>
                         <p>{logement.host.name}</p>
                         <img src={logement.host.picture}/>
                     </div>
                 </div>
-                <div className='logement-header-2'>
-                    <div className='tags'>
+                <div id='logement-header-2' className='flex f-row jc-sb algni-ctr'>
+                    <div className='flex f-row g15'>
                         {
                             logement.tags.map((tag) => (
                             <button className='tag' key={tag}>{tag}</button>
                             ))
                         }
                     </div>
-                    <div className='note'>
+                    <div id='note' className='flex f-row'>
                         {
                             [...Array(5)].map((Element, i) => (
                                 <img key={i} src={i < logement.rating ? EtoileActive : EtoileInactive} />
@@ -70,23 +70,23 @@ function Logement()
                         }
                     </div>
                 </div>
-                <div className='details'>
-                    <div className='description'>
-                        <div className='titre'>
+                <div id='details' className='flex f-row jc-sb'>
+                    <div id='description'>
+                        <div className='titre flex jc-sb algni-ctr'>
                             Description
                             <img src={FlecheBas} onClick={activerDescription} className={descriptionActive ? "img-active" : "img-inactive"}/>
                         </div>
-                        <div className={descriptionActive ? "contenu-description active" : "contenu-description"}>
+                        <div id='contenu-description' className={descriptionActive ? "active" : ""}>
                             {logement.description}
                         </div>
                     </div>
-                    <div className='equipements'>
-                        <div className='titre'>
+                    <div id='equipements'>
+                        <div className='titre flex jc-sb algni-ctr'>
                             Équipements
                             <img src={FlecheBas} onClick={activerEquipements} className={equipementsActif ? "img-active" : "img-inactive"}/>
                         </div>
-                        <div className={equipementsActif ? "contenu-equipements active" : "contenu-equipements"}>
-                            <ul className='liste-equipements'>
+                        <div id='contenu-equipements' className={equipementsActif ? "active" : ""}>
+                            <ul id='liste-equipements' className='flex f-col pdn-0 mgn-0 g5'>
                                 {
                                     logement.equipments.map((equipement) => (
                                         <li key={equipement}>{equipement}</li>

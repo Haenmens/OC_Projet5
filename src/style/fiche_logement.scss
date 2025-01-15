@@ -1,11 +1,8 @@
 .fiche-logement {
     background: linear-gradient(to bottom, #FF6060, #CC4D4D);
-    width: 340px;
+    width: calc((100% - 2 * 50px) / 3);
     height: 340px;
     border-radius: 10px;
-    display: flex;
-    justify-content: flex-start;
-    align-items: flex-end;
     text-decoration: none;
 
     p{
