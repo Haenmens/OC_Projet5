@@ -4,3 +4,12 @@
     padding: 56px 55px;
     background-color: #F6F6F6;
 }
+
+@media screen and (max-width: 768px) {
+    #galerie {
+        flex-direction: column;
+        padding: 0;
+        background-color: white;
+        gap: 20px;
+    }
+}

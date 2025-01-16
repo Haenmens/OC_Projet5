@@ -21,3 +21,22 @@ header {
         }
     }
 }
+
+@media screen and (max-width: 768px) {
+    header {
+        font-weight: 500;
+        font-size: 12px;
+        align-items: center;
+        padding-top: 20px;
+        text-transform: uppercase;
+
+        img {
+            width: 145px;
+            height: 47px;
+        }
+
+        nav {
+            gap: 20px;
+        }
+    }
+}

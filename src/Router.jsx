@@ -2,6 +2,7 @@ import { Routes, Route } from 'react-router'
 import Accueil from './Accueil.jsx'
 import APropos from './A_Propos.jsx';
 import Logement from './Logement.jsx';
+import Erreur from './404.jsx';
 
 function Router()
 {
@@ -9,7 +10,8 @@ function Router()
         <Routes>
             <Route path='/' element={<Accueil />}/>
             <Route path='/a_propos' element={<APropos />}/>
-            <Route path='/logement' element={<Logement />}/>
+            <Route path='/logement/:id' element={<Logement />}/>
+            <Route path='/*' element={<Erreur />}/>
         </Routes>
     );
 }

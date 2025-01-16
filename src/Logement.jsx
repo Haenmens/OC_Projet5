@@ -1,16 +1,23 @@
 import './style/logement.scss'
-import { useLocation } from "react-router";
+import { useParams, Navigate } from "react-router";
 import { useState } from 'react';
+import Logements from './assets/logements.json'
 import FlecheGauche from "./assets/icones/fleche_gauche.png"
 import FlecheDroite from "./assets/icones/fleche_droite.png"
 import FlecheBas from "./assets/icones/fleche_bas.png"
 import EtoileActive from "./assets/icones/etoile_active.png"
 import EtoileInactive from "./assets/icones/etoile_inactive.png"
+import Erreur from './404';
 
 function Logement()
 {
-    const location = useLocation();
-    const logement = location.state;
+    const { id } = useParams();
+    const logement = Logements.find((logement) => logement.id == id);
+
+    if (!logement)
+    {
+        return (<Navigate to="/404" />);
+    }
 
     const [indexActuel, setIndexActuel] = useState(0);
 
@@ -34,8 +41,8 @@ function Logement()
     return (
         <main>
             <div id="logement" className='p-r'>
-                <div id='carrousel' className='p-r mgn-auto'>
-                {
+                <section id='carrousel' className='p-r mgn-auto'>
+                    {
                         logement.pictures.map((photo, i) => (
                             <img src={photo} key={i} className={i === indexActuel ? "visible w100" : "cachee"}/>
                         ))
@@ -43,8 +50,8 @@ function Logement()
                     <img src={FlecheGauche} id='fleche-gauche' className={logement.pictures.length > 1 ? "p-a curs-p" : "cachee"} onClick={imagePrecedente}/>
                     <img src={FlecheDroite} id='fleche-droite' className={logement.pictures.length > 1 ? "p-a curs-p" : "cachee"} onClick={imageSuivante}/>
                     <p id='compteur' className={logement.pictures.length > 1 ? "p-a" : "cachee"}>{indexActuel + 1}/{logement.pictures.length}</p>
-                </div>
-                <div id='logement-header-1' className='flex f-row algni-ctr jc-sb'>
+                </section>
+                <section id='logement-header-1' className='flex f-row algni-ctr jc-sb'>
                     <div id='logement-titre'>
                         <h2>{logement.title}</h2>
                         <p id='localisation'>{logement.location}</p>
@@ -53,8 +60,8 @@ function Logement()
                         <p>{logement.host.name}</p>
                         <img src={logement.host.picture}/>
                     </div>
-                </div>
-                <div id='logement-header-2' className='flex f-row jc-sb algni-ctr'>
+                </section>
+                <section id='logement-header-2' className='flex f-row jc-sb algni-ctr'>
                     <div className='flex f-row g15'>
                         {
                             logement.tags.map((tag) => (
@@ -69,8 +76,8 @@ function Logement()
                             ))
                         }
                     </div>
-                </div>
-                <div id='details' className='flex f-row jc-sb'>
+                </section>
+                <section id='details' className='flex f-row jc-sb'>
                     <div id='description'>
                         <div className='titre flex jc-sb algni-ctr'>
                             Description
@@ -95,7 +102,7 @@ function Logement()
                             </ul>
                         </div>
                     </div>
-                </div>
+                </section>
             </div>
         </main>
     );

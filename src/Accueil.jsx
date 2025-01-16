@@ -7,17 +7,17 @@ function Accueil()
 {
     return (
             <main>
-                <div className='image-main p-r'>
+                <section className='image-main p-r'>
                     <img src={ImgAccueil} className='w100'/>
                     <div className='calque w100 flex algni-ctr jc-ctr p-a'><p>Chez vous, partout et ailleurs</p></div>
-                </div>
-                <div id='galerie' className='flex f-row jc-fs g50 f-wrap'>
+                </section>
+                <section id='galerie' className='flex f-row jc-fs g50 f-wrap'>
                     { 
                         Logements.map((logement) => (
                             <FicheLogement key={logement.id} logement={logement}/>
                         ))
                     }
-                </div>
+                </section>
             </main>
     );
 }

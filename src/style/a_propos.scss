@@ -4,17 +4,20 @@
 
     .element-apropos {
 
-        .titre {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
+        header {
             background-color: #FF6060;
             border-radius: 10px;
-            font-size: 18px;
-            font-weight: 700;
-            color: white;
             padding: 15px 10px;
 
+            h2 {
+                font-size: 18px;
+                font-weight: 700;
+                color: white;
+            }
+            button {
+                border: none;
+                background-color: rgba(0, 0, 0, 0);
+            }
             img {
                 width: 24px;
                 height: 13px;
