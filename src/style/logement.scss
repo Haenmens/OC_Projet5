@@ -26,62 +26,67 @@
         font-weight: 500;
     }
 
-    #logement-header-1 {
 
-        #logement-titre {
-            h2 {
-                font-size: 36px;
-                font-weight: 500;
-                color: #FF6060;
-                margin-bottom: 5px;
+    #infos {
+        margin-bottom: 30px;
+
+        #logement-header-1 {
+
+            #logement-titre {
+                h2 {
+                    font-size: 36px;
+                    font-weight: 500;
+                    color: #FF6060;
+                    margin: 10px 0;
+                }
+                #localisation {
+                    font-size: 18px;
+                    font-weight: 500;
+                    margin-top: 0;
+                    margin-bottom: 20px;
+                }
             }
-            #localisation {
-                font-size: 18px;
-                font-weight: 500;
-                margin-top: 0;
-                margin-bottom: 20px;
+            
+            .tag {
+                border: none;
+                border-radius: 10px;
+                background-color: #FF6060;
+                color: white;
+                padding: 3px 40px;
+                font-family: 'Montserrat';
+                font-size: 14px;
+                font-weight: 700;
             }
         }
-        
-        #hote {
 
-            p {
-                font-size: 18px;
-                font-weight: 500;
-                color: #FF6060;
-                text-align: right;
-                max-width: 90px;
+        #logement-header-2 {
+
+            #note {
+
+                img {
+                    width: 36px;
+                    height: 36px;
+                }
             }
-            img {
-                width: 64px;
-                height: 64px;
-                border-radius: 45px;
+
+            #hote {
+
+                p {
+                    font-size: 18px;
+                    font-weight: 500;
+                    color: #FF6060;
+                    text-align: right;
+                    max-width: 90px;
+                }
+                img {
+                    width: 64px;
+                    height: 64px;
+                    border-radius: 45px;
+                }
             }
         }
     }
-
-    #logement-header-2 {
-        margin-bottom: 20px;
-        
-        .tag {
-            border: none;
-            border-radius: 10px;
-            background-color: #FF6060;
-            color: white;
-            padding: 3px 40px;
-            font-family: 'Montserrat';
-            font-size: 14px;
-            font-weight: 700;
-        }
-
-        #note {
-
-            img {
-                width: 36px;
-                height: 36px;
-            }
-        }
-    }
+    
     
     #details {
 
@@ -110,7 +115,7 @@
             }
         }
 
-        #contenu-description {
+        .contenu {
             padding: 0;
             background-color: #F6F6F6;
             font-size: 18px;
@@ -122,25 +127,107 @@
             transition: max-height 0.3s ease, padding 0.5s ease;
         }
 
-        #contenu-equipements {
-            padding: 0;
-            background-color: #F6F6F6;
-            font-size: 18px;
-            font-weight: 400;
-            border-bottom-right-radius: 5px;
-            border-bottom-left-radius: 5px;
-            max-height: 0;
-            overflow: hidden;
-            transition: max-height 0.3s ease, padding 0.5s ease;
-
-            #liste-equipements {
-                list-style: none;
-            }
+        #liste-equipements {
+            list-style: none;
         }
 
         .active {
             padding: 20px !important;
             max-height: 100% !important;
+        }
+    }
+    
+}
+
+@media screen and (max-width: 768px) {
+    #logement {
+
+        img {
+            height: 255px;
+        }
+        #fleche-gauche,#fleche-droite {
+            top: 10vh;
+            width: 24px;
+            height: 40px;
+        }
+        #compteur {
+            display: none;
+        }
+
+        #infos {
+            flex-direction: column;
+            gap: 10px;
+            margin-bottom: 10px;
+
+            #logement-header-1 {
+
+                #logement-titre {
+
+                    h2 {
+                        font-size: calc(0.04018 * 100vw + 5.1429px);
+                    }
+
+                    #localisation {
+                        font-size: calc(0.00893 * 100vw + 11.14286px);;
+                    }
+                }
+
+                #tags {
+                    flex-wrap: wrap;
+                }
+
+                .tag {
+                    font-size: calc(0.00893 * 100vw + 7.14286px);
+                }
+            }
+            
+            #logement-header-2 {
+                flex-direction: row-reverse;
+                align-items: center;
+
+                #note {
+
+                    img {
+                        width: calc(0.03125 * 100vw + 8px);
+                        height: calc(0.03125 * 100vw + 8px);
+                    }
+                }
+    
+                #hote {
+    
+                    p {
+                        font-size: calc(0.01339 * 100vw + 7.71429px);
+                    }
+                    img {
+                        width: calc(0.0714 * 100vw + 9.1429px);
+                        height: calc(0.0714 * 100vw + 9.1429px);
+                        border-radius: 45px;
+                    }
+                }
+            }
+        }
+
+        #details {
+            flex-direction: column;
+            margin: 0;
+            gap: 15px;
+
+            #description, #equipements {
+                width: 100%;
+            }
+
+            .titre {
+                font-size: calc(0.01116 * 100vw + 9.42857px);
+
+                img {
+                    width: 16px;
+                    height: 9px;
+                }
+            }
+
+            .contenu {
+                font-size: calc(0.020089 * 100vw + 2.571px);;
+            }
         }
     }
     

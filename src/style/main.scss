@@ -49,6 +49,7 @@ header, main {
 }
 
 @media screen and (max-width: 768px) {
+
     .image-main {
 
         img {
@@ -60,5 +61,12 @@ header, main {
                 font-size: 24px;
             }
         }
+    }
+}
+
+@media screen and (max-width: 360px) {
+
+    header, main {
+        padding: 0 15px;
     }
 }

@@ -51,39 +51,41 @@ function Logement()
                     <img src={FlecheDroite} id='fleche-droite' className={logement.pictures.length > 1 ? "p-a curs-p" : "cachee"} onClick={imageSuivante}/>
                     <p id='compteur' className={logement.pictures.length > 1 ? "p-a" : "cachee"}>{indexActuel + 1}/{logement.pictures.length}</p>
                 </section>
-                <section id='logement-header-1' className='flex f-row algni-ctr jc-sb'>
-                    <div id='logement-titre'>
-                        <h2>{logement.title}</h2>
-                        <p id='localisation'>{logement.location}</p>
-                    </div>
-                    <div id='hote' className='flex f-row algni-ctr g10'>
-                        <p>{logement.host.name}</p>
-                        <img src={logement.host.picture}/>
-                    </div>
-                </section>
-                <section id='logement-header-2' className='flex f-row jc-sb algni-ctr'>
-                    <div className='flex f-row g15'>
-                        {
-                            logement.tags.map((tag) => (
-                            <button className='tag' key={tag}>{tag}</button>
-                            ))
-                        }
-                    </div>
-                    <div id='note' className='flex f-row'>
-                        {
-                            [...Array(5)].map((Element, i) => (
-                                <img key={i} src={i < logement.rating ? EtoileActive : EtoileInactive} />
-                            ))
-                        }
-                    </div>
-                </section>
+                <div id='infos' className='flex f-row jc-sb'>
+                    <section id='logement-header-1' className='flex f-col'>
+                        <div id='logement-titre'>
+                            <h2>{logement.title}</h2>
+                            <p id='localisation'>{logement.location}</p>
+                        </div>
+                        <div id='tags' className='flex f-row g15'>
+                            {
+                                logement.tags.map((tag) => (
+                                <button className='tag' key={tag}>{tag}</button>
+                                ))
+                            }
+                        </div>
+                    </section>
+                    <section id='logement-header-2' className='flex f-col algni-fe jc-sb g10'>
+                        <div id='hote' className='flex f-row algni-ctr g10'>
+                            <p>{logement.host.name}</p>
+                            <img src={logement.host.picture}/>
+                        </div>
+                        <div id='note' className='flex f-row'>
+                            {
+                                [...Array(5)].map((Element, i) => (
+                                    <img key={i} src={i < logement.rating ? EtoileActive : EtoileInactive} />
+                                ))
+                            }
+                        </div>
+                    </section>
+                </div>                
                 <section id='details' className='flex f-row jc-sb'>
                     <div id='description'>
                         <div className='titre flex jc-sb algni-ctr'>
                             Description
                             <img src={FlecheBas} onClick={activerDescription} className={descriptionActive ? "img-active" : "img-inactive"}/>
                         </div>
-                        <div id='contenu-description' className={descriptionActive ? "active" : ""}>
+                        <div className={descriptionActive ? "contenu active" : "contenu"}>
                             {logement.description}
                         </div>
                     </div>
@@ -92,7 +94,7 @@ function Logement()
                             Équipements
                             <img src={FlecheBas} onClick={activerEquipements} className={equipementsActif ? "img-active" : "img-inactive"}/>
                         </div>
-                        <div id='contenu-equipements' className={equipementsActif ? "active" : ""}>
+                        <div className={equipementsActif ? "contenu active" : "contenu"}>
                             <ul id='liste-equipements' className='flex f-col pdn-0 mgn-0 g5'>
                                 {
                                     logement.equipments.map((equipement) => (

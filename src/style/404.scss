@@ -20,3 +20,23 @@
         color: black;
     }
 }
+
+@media screen and (max-width: 768px) {
+
+    #erreur {
+        gap: 80px;
+
+        h1 {
+            font-size: calc(0.4286 * 100vw - 41.1429px);
+        }
+
+        p {
+            font-size: calc(0.04018 * 100vw + 5.1429px);
+            text-align: center;
+        }
+
+        Link {
+            font-size: calc(0.00893 * 100vw + 11.14286px);
+        }
+    }
+}

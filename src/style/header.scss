@@ -40,3 +40,11 @@ header {
         }
     }
 }
+
+@media screen and (max-width: 360px) {
+    header {
+        nav {
+            gap: 10px;
+        }
+    }
+}
