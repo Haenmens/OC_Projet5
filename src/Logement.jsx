@@ -57,7 +57,7 @@ function Logement()
                             <h2>{logement.title}</h2>
                             <p id='localisation'>{logement.location}</p>
                         </div>
-                        <div id='tags' className='flex f-row g15'>
+                        <div className='flex f-row f-wrap g15'>
                             {
                                 logement.tags.map((tag) => (
                                 <button className='tag' key={tag}>{tag}</button>
