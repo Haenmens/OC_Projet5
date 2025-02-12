@@ -1,6 +1,6 @@
-import './style/a_propos.scss'
-import ImgAPropos from './assets/images/a_propos.png'
-import FlecheBas from './assets/icones/fleche_bas.png'
+import '../style/APropos.scss'
+import ImgAPropos from '../assets/images/a_propos.png'
+import FlecheBas from '../assets/icones/fleche_bas.png'
 import { useState } from 'react';
 
 function APropos()

@@ -1,4 +1,4 @@
-import './style/404.scss'
+import '../style/404.scss'
 import { Link } from 'react-router'
 
 function Erreur()

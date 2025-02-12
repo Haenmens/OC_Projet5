@@ -89,7 +89,6 @@
     
     
     #details {
-
         #description, #equipements {
             width: calc(50% - 15px);
         }
@@ -223,6 +222,10 @@
 
             .contenu {
                 font-size: calc(0.020089 * 100vw + 2.571px);;
+            }
+
+            .active {
+                height: auto !important;
             }
         }
     }

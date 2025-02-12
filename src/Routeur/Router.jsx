@@ -1,8 +1,8 @@
 import { Routes, Route } from 'react-router'
-import Accueil from './Accueil.jsx'
-import APropos from './A_Propos.jsx';
-import Logement from './Logement.jsx';
-import Erreur from './404.jsx';
+import Accueil from '../Pages/Accueil.jsx'
+import APropos from '../Pages/APropos.jsx';
+import Logement from '../Pages/Logement.jsx';
+import Erreur from '../Pages/404.jsx';
 
 function Router()
 {

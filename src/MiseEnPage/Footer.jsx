@@ -1,5 +1,5 @@
-import "./style/footer.scss"
-import LogoBlanc from './assets/icones/logo_blanc.png'
+import "../style/Footer.scss"
+import LogoBlanc from '../assets/icones/logo_blanc.png'
 
 function Footer()
 {

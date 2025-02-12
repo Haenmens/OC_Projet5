@@ -1,7 +1,7 @@
-import './style/accueil.scss'
-import Logements from './assets/logements.json'
-import ImgAccueil from './assets/images/accueil.png'
-import FicheLogement from './FicheLogement';
+import '../style/Accueil.scss'
+import Logements from '../assets/logements.json'
+import ImgAccueil from '../assets/images/accueil.png'
+import FicheLogement from '../Composants/FicheLogement';
 
 function Accueil()
 {
