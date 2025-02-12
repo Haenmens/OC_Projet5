@@ -2,6 +2,7 @@ import '../style/APropos.scss'
 import ImgAPropos from '../assets/images/a_propos.png'
 import FlecheBas from '../assets/icones/fleche_bas.png'
 import { useState } from 'react';
+import Banderole from '../Composants/Banderole';
 
 function APropos()
 {
@@ -15,10 +16,7 @@ function APropos()
 
     return (
         <main>
-            <section className='image-main p-r'>
-                <img src={ImgAPropos} className='w100' />
-                <div className='calque p-a w100'></div>
-            </section>
+            <Banderole image={ImgAPropos} texte={""} />
             <section className='contenu-apropos flex f-col g30 mgn-auto'>
                 <article className='element-apropos'>
                     <header className='flex jc-sb algni-ctr'>

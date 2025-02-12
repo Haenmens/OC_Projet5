@@ -2,15 +2,13 @@ import '../style/Accueil.scss'
 import Logements from '../assets/logements.json'
 import ImgAccueil from '../assets/images/accueil.png'
 import FicheLogement from '../Composants/FicheLogement';
+import Banderole from '../Composants/Banderole';
 
 function Accueil()
 {
     return (
             <main>
-                <section className='image-main p-r'>
-                    <img src={ImgAccueil} className='w100'/>
-                    <div className='calque w100 flex algni-ctr jc-ctr p-a'><p>Chez vous, partout et ailleurs</p></div>
-                </section>
+                <Banderole image={ImgAccueil} texte={"Chez vous, partout et ailleurs"}/>
                 <section id='galerie' className='flex f-row jc-fs g50 f-wrap'>
                     { 
                         Logements.map((logement) => (
