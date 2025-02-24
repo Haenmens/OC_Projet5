@@ -1,0 +1,42 @@
+#carrousel {
+    img {
+        height: 415px;
+        object-fit: cover;
+        border-radius: 25px;
+    }
+
+    #fleche-gauche,#fleche-droite {
+        top: 17vh;
+        width: 46px;
+        height: 80px;
+    }
+    #fleche-gauche {
+        left: 2vw;
+    }
+    #fleche-droite {
+        right: 2vw;
+    }
+    #compteur {
+        bottom: 1vh;
+        left: calc(50% - 4ch);
+        color: white;
+        font-size: 18px;
+        font-weight: 500;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    #carrousel {
+        img {
+            height: 255px;
+        }
+        #fleche-gauche,#fleche-droite {
+            top: 10vh;
+            width: 24px;
+            height: 40px;
+        }
+        #compteur {
+            display: none;
+        }
+    }
+}

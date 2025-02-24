@@ -1,32 +1,6 @@
 #logement {
     margin-top: 45px;
 
-    img {
-        height: 415px;
-        object-fit: cover;
-        border-radius: 25px;
-    }
-
-    #fleche-gauche,#fleche-droite {
-        top: 17vh;
-        width: 46px;
-        height: 80px;
-    }
-    #fleche-gauche {
-        left: 2vw;
-    }
-    #fleche-droite {
-        right: 2vw;
-    }
-    #compteur {
-        bottom: 1vh;
-        left: calc(50% - 4ch);
-        color: white;
-        font-size: 18px;
-        font-weight: 500;
-    }
-
-
     #infos {
         margin-bottom: 30px;
 
@@ -86,72 +60,26 @@
             }
         }
     }
-    
-    
+
     #details {
-        #description, #equipements {
-            width: calc(50% - 15px);
-        }
+        align-items: stretch;
+        .menu-deroulant {
+            flex: 1;
+            height: auto;
 
-        .titre {
-            background-color: #FF6060;
-            border-radius: 10px;
-            font-size: 18px;
-            font-weight: 700;
-            color: white;
-            padding: 15px 10px;
+            .menu-deroulant-contenu {
+                height: calc(100% - 40px - 52px);
 
-            img {
-                width: 24px;
-                height: 13px;
-                cursor: pointer;
-                transform: rotate(0deg);
-                transition: transform 0.3s ease;
+                ul {
+                    list-style: none;
+                }
             }
-
-            .img-active {
-                transform: rotate(180deg);
-            }
-        }
-
-        .contenu {
-            padding: 0;
-            background-color: #F6F6F6;
-            font-size: 18px;
-            font-weight: 400;
-            border-bottom-right-radius: 5px;
-            border-bottom-left-radius: 5px;
-            max-height: 0;
-            overflow: hidden;
-            transition: max-height 0.3s ease, padding 0.5s ease;
-        }
-
-        #liste-equipements {
-            list-style: none;
-        }
-
-        .active {
-            padding: 20px !important;
-            max-height: 100% !important;
         }
     }
-    
 }
 
 @media screen and (max-width: 768px) {
     #logement {
-
-        img {
-            height: 255px;
-        }
-        #fleche-gauche,#fleche-droite {
-            top: 10vh;
-            width: 24px;
-            height: 40px;
-        }
-        #compteur {
-            display: none;
-        }
 
         #infos {
             flex-direction: column;
@@ -204,30 +132,6 @@
 
         #details {
             flex-direction: column;
-            margin: 0;
-            gap: 15px;
-
-            #description, #equipements {
-                width: 100%;
-            }
-
-            .titre {
-                font-size: calc(0.01116 * 100vw + 9.42857px);
-
-                img {
-                    width: 16px;
-                    height: 9px;
-                }
-            }
-
-            .contenu {
-                font-size: calc(0.020089 * 100vw + 2.571px);;
-            }
-
-            .active {
-                height: auto !important;
-            }
         }
     }
-    
 }
