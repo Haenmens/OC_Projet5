@@ -7,16 +7,16 @@ import Banderole from '../Composants/Banderole';
 function Accueil()
 {
     return (
-            <main>
-                <Banderole image={ImgAccueil} texte={"Chez vous, partout et ailleurs"}/>
-                <section id='galerie' className='flex f-row jc-fs g50 f-wrap'>
-                    { 
-                        Logements.map((logement) => (
-                            <FicheLogement key={logement.id} logement={logement}/>
-                        ))
-                    }
-                </section>
-            </main>
+        <main>
+            <Banderole image={ImgAccueil} texte={"Chez vous, partout et ailleurs"}/>
+            <section id='galerie' className='flex f-row jc-fs g50 f-wrap'>
+                { 
+                    Logements.map((logement) => (
+                        <FicheLogement key={logement.id} logement={logement}/>
+                    ))
+                }
+            </section>
+        </main>
     );
 }
 

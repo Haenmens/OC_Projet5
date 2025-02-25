@@ -42,7 +42,7 @@ function Logement()
                         </div>
                         <div id='note' className='flex f-row'>
                             {
-                                //Création d'un tableau de 5 cases vides pour boucler dedans avec map et gérer l'affichage de la notation
+                                //Création d'un tableau de 5 cases vides pour boucler dedans avec map et gérer l'affichage de la notation (alternative à la for loop)
                                 [...Array(5)].map((element, i) => (
                                     <img key={i} src={i < logement.rating ? EtoileActive : EtoileInactive} />
                                 ))

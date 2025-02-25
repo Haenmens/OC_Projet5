@@ -1,20 +1,10 @@
 import '../style/APropos.scss'
 import ImgAPropos from '../assets/images/a_propos.png'
-import FlecheBas from '../assets/icones/fleche_bas.png'
-import { useState } from 'react';
 import Banderole from '../Composants/Banderole';
 import MenuDeroulant from '../Composants/MenuDeroulant';
 
 function APropos()
 {
-    const [contenuActif, ActiverContenu] = useState([false, false, false, false]);
-
-    const ouvrirContenu = (id) => {
-        const NouveauContenu = [...contenuActif];
-        NouveauContenu[id] = !NouveauContenu[id];
-        ActiverContenu(NouveauContenu);
-    };
-
     return (
         <main>
             <Banderole image={ImgAPropos} texte={""} />
